@@ -8,7 +8,8 @@
     --white: #ffffff;
 
     --gray-100: #e1e1e6;
-    --gra-300: #9a9aa5;
+    --gray-300: #9a9aa5;
+    --gray-700: #323238;
     --gray-800: #29292e;
     --gray-850: #1f2729;
     --gray-900: #121214;
@@ -41,5 +42,9 @@ body, input, textarea, select, textarea, button {
 
 button {
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
 }
 

@@ -13,7 +13,7 @@ interface HomeProps {
   }
 }
 
-export default function Home({product}: HomeProps) {
+export default function Home({ product }: HomeProps) {
   return (
     <>
       <Head>
@@ -24,7 +24,7 @@ export default function Home({product}: HomeProps) {
           <span>👏 Hey, Welcome</span>
           <h1> News about the <span>React</span> world.</h1>
           <p>
-            Get access to all the publications <br/>
+            Get access to all the publications <br />
             <span>for {product.amount} month</span>
           </p>
 

@@ -6,26 +6,37 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
-    "@stripe/stripe-js": "^1.27.0",
-    "axios": "^0.26.1",
-    "faunadb": "^4.5.4",
-    "next": "12.1.5",
-    "next-auth": "^4.3.2",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "react-icons": "^4.3.1",
-    "sass": "^1.50.0",
-    "stripe": "^8.217.0"
+    "@prismicio/client": "^5.1.0",
+    "@stripe/stripe-js": "^1.15.1",
+    "@types/prismic-dom": "^2.1.1",
+    "axios": "^0.21.1",
+    "faunadb": "^4.3.0",
+    "next": "11.0.1",
+    "next-auth": "^3.27.1",
+    "prismic-dom": "^2.2.5",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "sass": "^1.35.1",
+    "stripe": "^8.157.0"
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.13.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.1.2",
     "@types/next-auth": "^3.15.0",
-    "@types/node": "^17.0.24",
-    "@types/react": "^18.0.5",
-    "eslint": "8.13.0",
-    "eslint-config-next": "12.1.5",
-    "typescript": "^4.6.3"
+    "@types/node": "^15.12.4",
+    "@types/react": "^17.0.11",
+    "babel-jest": "^27.5.1",
+    "eslint": "7.29.0",
+    "eslint-config-next": "11.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
+    "jest-dom": "^4.0.0",
+    "typescript": "^4.3.4"
   }
 }
