@@ -16,6 +16,12 @@ interface PostProps {
     }
 }
 
+type Info = {
+    title: any;
+    content: any;
+
+}
+
 export default function Post({ post }: PostProps) {
     return (
         <>
@@ -54,10 +60,12 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
 
     const response = await prismic.getByUID('post', String(slug), {})
 
+    const { title, content } = response.data as Info
+
     const post = {
         slug,
-        title: RichText.asText(response.data.title),
-        content: RichText.asHtml(response.data.content),
+        title: RichText.asText(title),
+        content: RichText.asHtml(content),
         updatedAt: new Date(response.last_publication_date).toLocaleDateString('pt-BR', {
             day: '2-digit',
             month: 'long',

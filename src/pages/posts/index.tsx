@@ -15,6 +15,10 @@ type Post = {
     updatedAt: string;
 };
 
+type Info = {
+    title: any;
+    content: any;
+}
 interface PostsProps {
     posts: Post[]
 }
@@ -54,10 +58,11 @@ export const getStaticProps: GetStaticProps = async () => {
     })
 
     const posts = response.results.map(post => {
+        const { title, content } = post.data as Info
         return {
             slug: post.uid,
-            title: RichText.asText(post.data.title),
-            excerpt: post.data.content.find(content => content.type === 'paragraph')?.text ?? '',
+            title: RichText.asText(title),
+            excerpt: content.find(content => content.type === 'paragraph')?.text ?? '',
             updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', {
                 day: '2-digit',
                 month: 'long',
