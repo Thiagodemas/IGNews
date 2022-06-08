@@ -17,9 +17,8 @@ interface PostProps {
 }
 
 type Info = {
-    title: any;
-    content: any;
-
+    title: string;
+    content: any | string;
 }
 
 export default function Post({ post }: PostProps) {

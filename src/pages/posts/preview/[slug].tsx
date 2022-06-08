@@ -20,9 +20,8 @@ interface PostPreviewProps {
 }
 
 type Info = {
-    title: any;
-    content: any;
-
+    title: string;
+    content: any | string;
 }
 
 export default function PostPreview({ post }: PostPreviewProps) {

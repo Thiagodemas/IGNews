@@ -16,8 +16,8 @@ type Post = {
 };
 
 type Info = {
-    title: any;
-    content: any;
+    title: string;
+    content: any | string;
 }
 interface PostsProps {
     posts: Post[]
